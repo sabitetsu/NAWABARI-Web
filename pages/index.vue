@@ -1,11 +1,14 @@
 <template>
-  <h1>Hello World!</h1>
+  <div>
+    <h1>Hello World!</h1>
+    <VTerritory />
+  </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+export default {
 
-export default Vue.extend({})
+}
 </script>
 
 <style lang="scss">

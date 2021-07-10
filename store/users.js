@@ -30,7 +30,7 @@ export default{
     }
   },
   actions: {
-    fetchusers({ commit }) {
+    fetchUsers({ commit }) {
       userRef
       .onSnapshot(
         res => {
