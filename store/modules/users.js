@@ -1,8 +1,4 @@
 
-const db = this.$fire.firestore
-
-const userRef = db.collection('users')
-
 export default{
   state(){
     return{
@@ -31,7 +27,7 @@ export default{
   },
   actions: {
     fetchUsers({ commit }) {
-      // const userRef = this.$fire.firestore.collection('users')
+      const userRef = this.$fire.firestore.collection('users')
       userRef
       .onSnapshot(
         res => {
@@ -49,6 +45,7 @@ export default{
       )
     },
     addUser({commit}, user){
+      const userRef = this.$fire.firestore.collection('users')
       const ref = userRef.doc()
       userRef
       .doc(ref.id)
@@ -62,6 +59,7 @@ export default{
       })
     },
     deleteUser({commit}, {id,index}){
+      const userRef = this.$fire.firestore.collection('users')
       userRef.doc(id).delete()
       .then(
         // commit('deleteuser',index)
