@@ -66,7 +66,13 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          
+          apiKey: "AIzaSyAHeAa7lsCGIuVunWYH_gWvoYtnOperETs",
+          authDomain: "nawabari-681e0.firebaseapp.com",
+          projectId: "nawabari-681e0",
+          storageBucket: "nawabari-681e0.appspot.com",
+          messagingSenderId: "1087689835618",
+          appId: "1:1087689835618:web:fac63585f979b34adafd3b",
+          measurementId: "G-Q1QKGCXGFM"
         }
       }
     ]
