@@ -26,6 +26,18 @@ export default{
     }
   },
   actions: {
+    initUsers({ commit }){
+      const userRef = this.$fire.firestore.collection('users')
+      userRef
+      .get()
+      .then(res =>{
+        res.forEach((doc) => {
+          console.log("いにっと")
+          console.log(doc.data())
+          commit('ADD_USER',doc.data())
+        })
+      })
+    },
     fetchUsers({ commit }) {
       const userRef = this.$fire.firestore.collection('users')
       userRef
@@ -51,8 +63,14 @@ export default{
       .doc(ref.id)
       .set({
         id: ref.id,
-        task: user.task,
-        isFinished: user.check
+        profile: {
+          age: ref.age,
+          breed: ref.breed,
+          description: ref.description,
+          name: ref.name,
+          sex: ref.sex
+        },
+        territory: ref.territory
       })
       .catch(function(error){
         console.error("えらー　あでぃんぐ　どきゅめんと: ", error)
@@ -70,7 +88,7 @@ export default{
     }
   },
   getters: {
-    getusers(state){
+    getUsers(state){
       return state.users
     }
   }
