@@ -62,21 +62,27 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
-    [
-      '@nuxtjs/firebase',
-      {
-        config: {
-          apiKey: "AIzaSyAHeAa7lsCGIuVunWYH_gWvoYtnOperETs",
-          authDomain: "nawabari-681e0.firebaseapp.com",
-          projectId: "nawabari-681e0",
-          storageBucket: "nawabari-681e0.appspot.com",
-          messagingSenderId: "1087689835618",
-          appId: "1:1087689835618:web:fac63585f979b34adafd3b",
-          measurementId: "G-Q1QKGCXGFM"
-        }
-      }
-    ]
+    '@nuxtjs/firebase',
   ],
+  
+  firebase: {
+    config: {
+      apiKey: "AIzaSyAHeAa7lsCGIuVunWYH_gWvoYtnOperETs",
+      authDomain: "nawabari-681e0.firebaseapp.com",
+      projectId: "nawabari-681e0",
+      storageBucket: "nawabari-681e0.appspot.com",
+      messagingSenderId: "1087689835618",
+      appId: "1:1087689835618:web:fac63585f979b34adafd3b",
+      measurementId: "G-Q1QKGCXGFM"
+    },
+    services: {
+      firestore: {
+        enablePersistence: {
+          synchronizeTabs: true
+        }
+      },
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

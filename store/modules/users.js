@@ -1,5 +1,5 @@
-import firebase from '~/plugins/firebase'
-const db = firebase.firestore();
+
+const db = this.$fire.firestore
 
 const userRef = db.collection('users')
 
@@ -31,6 +31,7 @@ export default{
   },
   actions: {
     fetchUsers({ commit }) {
+      // const userRef = this.$fire.firestore.collection('users')
       userRef
       .onSnapshot(
         res => {
