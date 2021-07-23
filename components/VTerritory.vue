@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>持っている縄張り</p>
+    <p>縄張り</p>
     <div v-for="(point,i) in $store.getters.getUsers" :key="i">
       <p>{{point.territory}}</p>
     </div>
