@@ -25,7 +25,7 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
       - name: Setup node.js 🏗
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.3.0
         with:
           node-version: ${{ matrix.node }}
       - name: Get yarn cache directory path 🛠
@@ -57,7 +57,7 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@master
       - name: Setup node.js 🏗
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.3.0
         with:
           node-version: ${{ matrix.node }}
       - name: Get yarn cache directory path 🛠
