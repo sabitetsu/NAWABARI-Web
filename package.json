@@ -20,7 +20,7 @@
     "firebase": "^8.7.1",
     "node-sass": "^5.0.0",
     "nuxt": "^2.14.12",
-    "sass-loader": "10.1.1"
+    "sass-loader": "12.3.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
