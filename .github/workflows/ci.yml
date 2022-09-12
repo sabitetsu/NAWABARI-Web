@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       - name: Setup node.js 🏗
         uses: actions/setup-node@v2.1.5
         with:
@@ -55,7 +55,7 @@ jobs:
     
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       - name: Setup node.js 🏗
         uses: actions/setup-node@v2.1.5
         with:
